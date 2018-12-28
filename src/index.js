@@ -8,7 +8,7 @@ import {directors} from './director';
 
 
 ReactDOM.render(
-    <div>
+    <div className='tc'>
         <Card id={directors[0].id} name={directors[0].name} birthname={directors[0].birthname} birthdate={directors[0].birthdate} birthplace={directors[0].birthplace}/>
         <Card id={directors[1].id} name={directors[1].name} birthname={directors[1].birthname} birthdate={directors[1].birthdate} birthplace={directors[1].birthplace}/>
         <Card id={directors[2].id} name={directors[2].name} birthname={directors[2].birthname} birthdate={directors[2].birthdate} birthplace={directors[2].birthplace}/>
