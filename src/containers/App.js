@@ -10,16 +10,16 @@ class App  extends Component {
     constructor(){
         super()
         this.state = {
-            directors: [],
+            directors: directors,
             searchfield: ''
         }
     }
 
-    componentDidMount() {
-        fetch('https://jsonplaceholder.typicode.com/users')
-        .then(response => response.json())
-        .then(users => this.setState({directors : users}));
-    }
+    // componentDidMount() {
+    //     fetch('https://jsonplaceholder.typicode.com/users')
+    //     .then(response => response.json())
+    //     .then(users => this.setState({directors : users}));
+    // }
 
     onsearchChange = (event) => {
         this.setState({searchfield: event.target.value})
@@ -30,7 +30,7 @@ class App  extends Component {
             return directors.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
         })
         if(this.state.directors.length === 0){
-            return <h1>loading</h1>
+            return <h1 style={{textAlign: "center", marginTop:250}}>loading</h1>
         }else{
             return(
                 <div className='tc'> 
